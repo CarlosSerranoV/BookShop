@@ -39,10 +39,20 @@ class _LoginState extends State<Login> {
       try {
         await _auth.signInWithEmailAndPassword(
             email: _email!, password: _password!);
-      } catch (e) {
-        showError(e.toString());
-        print(e);
+      } on FirebaseAuthException catch (e) {
+      print(e);
+      String errorMes = "";
+      if (e.code == 'user-not-found') {
+        errorMes = 'Ningun usuario encontrado con el email.';
+      } else if (e.code == 'wrong-password') {
+        errorMes = 'Contraseña incorrecta';
+      } else if (e.code == 'too-many-requests') {
+        errorMes = 'Demasiados peticiones';
       }
+      showError(errorMes);
+    }
+        
+      
     }
   }
 
