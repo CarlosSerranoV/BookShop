@@ -57,7 +57,7 @@ class _ScreenBookState extends State<ScreenBooks> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Personas en la base de datos'),
+        title: Text('Libro'),
         backgroundColor: Color(0xff6b2f90),
       ),
       body: SingleChildScrollView(

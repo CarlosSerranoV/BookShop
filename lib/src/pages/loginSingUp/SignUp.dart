@@ -92,7 +92,7 @@ class _SignUpState extends State<SignUp> {
                       EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 0),
                   child: Row(
                     children: [
-                      Text('SIGN IN',
+                      Text('SIGN UP',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold)),
                       Text('/',
@@ -116,7 +116,7 @@ class _SignUpState extends State<SignUp> {
                       Container(
                         child: TextFormField(
                             validator: (input) {
-                              if (input!.isEmpty) return 'Enter Name';
+                              if (input!.isEmpty) return 'Ingrese su nombre';
                             },
                             keyboardType: TextInputType.emailAddress,
                             obscureText: false,
@@ -143,7 +143,7 @@ class _SignUpState extends State<SignUp> {
                       Container(
                         child: TextFormField(
                             validator: (input) {
-                              if (input!.isEmpty) return 'Enter Email';
+                              if (input!.isEmpty) return 'Ingrese un Email';
                             },
                             keyboardType: TextInputType.emailAddress,
                             obscureText: false,
@@ -170,7 +170,7 @@ class _SignUpState extends State<SignUp> {
                         child: TextFormField(
                             validator: (input) {
                               if (input!.length < 6)
-                                return 'Provide Minimum 6 Character';
+                                return '  ingrese minimo 6 caracteres';
                             },
                             keyboardType: TextInputType.emailAddress,
                             obscureText: true,
